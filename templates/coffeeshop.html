@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Coffee shops{% endblock %}
+{% block content %}
+<table class="table table-striped w-50" >
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for business in mydata %}
+          <tr> 
+                <th>{{loop.index0}}</th>
+                <td>{{business['name']}}</td>
+                <td>{{business['rating']}}</td>
+          </tr>
+      {% endfor %}	  
+  </tbody>
+</table>
+{% endblock %}
